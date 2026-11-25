@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f8f4"><title>系统研习室 · 计算机系统基础 II</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap top-in">
+  <a href="#practice" class="brand" id="home"><img class="author-avatar" src="assets/author.jpg" alt=""><span>系统研习室<small>冰灵幻想℃邀月</small></span></a>
+  <nav aria-label="主导航"><button id="practice" class="nav active">专题练习</button><button id="errors" class="nav">错题本 <span id="error-count">0</span></button><button id="drill" class="nav">同类巩固</button><button id="shuffle" class="nav">乱序自测</button></nav>
+  <span class="course">计算机系统基础 <b>II</b></span>
+</div></header>
+<main class="wrap">
+<section class="hero" aria-labelledby="title">
+<div class="herotext"><div class="kicker"><i></i><span id="topic-code">专题 02</span><span class="line"></span><span id="topic-en">VIRTUAL MEMORY</span></div>
+<h1 id="title">虚拟内存</h1><p id="intro">从虚拟地址到物理地址，沿着一次访存练透页表、TLB 与内存分配。</p>
+<div class="hero-meta" id="hero-meta"></div></div>
+<div class="illustration" aria-hidden="true">
+<div class="diagram-grid"></div><div class="trace trace-a"></div><div class="trace trace-b"></div>
+<div class="plate bottom"></div><div class="plate mid"></div><div class="plate face"><div class="cells"></div><span class="chip-text" id="chip-text">MMU</span></div>
+<span class="callout call-a" id="diagram-a">虚拟地址 VA</span><span class="callout call-b" id="diagram-b">物理地址 PA</span>
+</div>
+</section>
+<div class="layout">
+<aside class="sidebar">
+<section class="sidecard"><h2>复习专题</h2><div id="topics"></div></section>
+<section class="sidecard progressbox"><h2>学习进度</h2><div class="progress-caption"><span id="done-count">0</span><small id="total-count"></small></div><div class="track"><div id="progress"></div></div><p id="progress-note"></p></section>
+</aside>
+<section class="work" aria-label="练习区">
+<div class="work-head"><h2 id="work-title">专题练习</h2><label class="select-label"><span class="sr">筛选知识点</span><select id="group"></select></label></div>
+<div class="tabs" id="types" aria-label="题型筛选"></div>
+<button id="io-samples" class="sample-entry" hidden>试做 8 道课堂风格示例 · 含详细解析与笔记</button>
+<section id="round-panel" class="round-panel" hidden aria-label="本轮练习"></section>
+<article id="question" class="qcard" aria-live="polite"></article>
+<details class="qmap" id="map"><summary>答题卡 <span id="map-count"></span></summary><div id="map-items"></div></details>
+</section></div></main>
+<footer class="wrap"><span>系统研习室</span><label class="paper-choice">页面底色 <select id="paper"><option value="sage">默认浅绿</option><option value="snow">冬日浅蓝</option></select></label></footer>
+<script src="registry.js"></script>
+<script src="bank/vm.js"></script>
+<script src="bank/vm-extra.js"></script>
+<script src="bank/vm-tables.js"></script>
+<script src="bank/ecf.js"></script>
+<script src="bank/io.js"></script>
+<script src="bank/io-samples.js"></script>
+<script src="bank/net.js"></script>
+<script src="bank/conc.js"></script>
+<script src="app.js"></script>
+</body></html>
